@@ -1,1 +1,1 @@
-../../whisper.cpp/whisper.cpp
+../../whisper.cpp/src/whisper.cpp

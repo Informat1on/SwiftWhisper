@@ -1,1 +1,1 @@
-../../../whisper.cpp/whisper.h
+../../../whisper.cpp/include/whisper.h

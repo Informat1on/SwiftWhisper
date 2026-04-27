@@ -1,1 +1,1 @@
-../../../whisper.cpp/coreml/whisper-encoder-impl.h
+../../../whisper.cpp/src/coreml/whisper-encoder-impl.h
