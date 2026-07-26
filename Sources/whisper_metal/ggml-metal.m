@@ -1,1 +1,0 @@
-../../whisper.cpp/ggml/src/ggml-metal/ggml-metal.m
