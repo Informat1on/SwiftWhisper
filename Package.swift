@@ -85,7 +85,7 @@ let package = Package(
         .library(name: "SwiftWhisper", targets: ["SwiftWhisper"])
     ],
     targets: [
-        .target(name: "SwiftWhisper", dependencies: [.target(name: "whisper_cpp")]),
+        .target(name: "SwiftWhisper", dependencies: [.target(name: "whisper_cpp"), .target(name: "whisper_metal")]),
 
         // ─── whisper_metal ─────────────────────────────────────────────────────────
         // ggml-metal-context.m / ggml-metal-device.m use manual retain/release, so the
@@ -104,6 +104,8 @@ let package = Package(
                 "ggml-metal-device.m",
                 "ggml-metal-device.cpp",
                 "ggml-metal-ops.cpp",
+                // fork-owned, not an upstream symlink — see scripts/sync-sources.sh
+                "swiftwhisper-metal-probe.m",
             ],
             resources: [.process("ggml-metal.metal")],
             publicHeadersPath: "include",
